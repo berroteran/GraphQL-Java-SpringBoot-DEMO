@@ -1,0 +1,11 @@
+
+
+#mutation
+mutation {
+  createVehicle(type: "car", modelCode: "B15", brandName: "NISSAN", launchDate: "2016-08-16")
+  {
+    id
+  }
+}
+
+
