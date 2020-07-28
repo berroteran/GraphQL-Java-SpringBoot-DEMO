@@ -22,14 +22,27 @@
 
 
     <dependencies>
+        <!-- FrameWork SpringBoot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- Capa de DATA,   persistencia con JPA-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <!-- almancen de datos o base de datos -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- GRAPHQLT TOOLS -->
+        <!-- is used for enabling GraphQL servlet, and it becomes available at a path /graphql. It initializes the GraphQLSchema bean. -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-spring-boot-starter</artifactId>
@@ -40,15 +53,11 @@
             <artifactId>graphql-java-tools</artifactId>
             <version>5.2.4</version>
         </dependency>
+        <!--Graphi Tools -->
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphiql-spring-boot-starter</artifactId>
             <version>5.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
         <!-- to evitar codigo repetitivo BoilerPlate -->
@@ -58,12 +67,14 @@
             <version>1.18.8</version>
             <optional>true</optional>
         </dependency>
+
     </dependencies>
 
 
     <build>
         <plugins>
-            <plugin>
+
+        <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
@@ -75,6 +86,7 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
