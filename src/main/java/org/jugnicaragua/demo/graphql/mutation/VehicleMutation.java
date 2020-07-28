@@ -25,5 +25,16 @@ public class VehicleMutation implements GraphQLMutationResolver {
     public Vehicle createVehicle(final String type, final String modelCode, final String brandName, final String launchDate) {
         return this.vehicleService.createVehicle(type, modelCode, brandName, launchDate);
     }
+
+    /**
+     * Corresponde a nuestra Muetacion para actualizar el color
+     *
+     * @param id
+     * @param color
+     * @return
+     */
+    public Vehicle updateColor(Integer id, final String color) {
+        return this.vehicleService.updateColor(id, color);
+    }
 }
 

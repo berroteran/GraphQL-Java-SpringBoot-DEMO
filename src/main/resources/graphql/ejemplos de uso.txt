@@ -8,4 +8,12 @@ mutation {
   }
 }
 
-
+#consultas
+query {
+  vehicles(count: 10)
+  {
+    id,
+    type,
+    modelCode
+}
+}

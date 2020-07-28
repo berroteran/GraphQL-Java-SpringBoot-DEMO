@@ -3,7 +3,8 @@ type Vehicle {
     type: String,
     modelCode: String,
     brandName: String,
-    launchDate: String
+    launchDate: String,
+    color: String
 }
 
 type Query {
@@ -13,4 +14,5 @@ type Query {
 
 type Mutation {
     createVehicle(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicle
+    updateColor(id:ID!, color:String!):Vehicle
 }

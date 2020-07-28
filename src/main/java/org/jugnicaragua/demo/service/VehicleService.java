@@ -29,6 +29,15 @@ public class VehicleService {
         return this.vehicleRepository.save(vehicle);
     }
 
+    @Transactional
+    public Vehicle updateColor(Integer id, String color) {
+        Vehicle car = this.vehicleRepository.findById(id).get();
+        car.setColor(color);
+        //save
+        this.vehicleRepository.save(car);
+        return car;
+    }
+
     @Transactional(readOnly = true)
     public List<Vehicle> getAllVehicles(final int count) {
         return this.vehicleRepository.findAll().stream().limit(count).collect(Collectors.toList());

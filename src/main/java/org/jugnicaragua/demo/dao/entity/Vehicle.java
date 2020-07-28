@@ -36,6 +36,11 @@ public class Vehicle implements Serializable {
     @Column(name = "launch_date")
     private LocalDate launchDate;
 
+    private String color;
+    private Double altura;
+    private Double ancho;
+    private Double largo;
+
     private transient String formattedDate;
 
     // Getter and setter
