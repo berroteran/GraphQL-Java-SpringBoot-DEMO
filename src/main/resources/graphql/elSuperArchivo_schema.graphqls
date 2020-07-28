@@ -1,5 +1,14 @@
+"""
+Esta es la descripcion del tipo Vehiculo.
+"""
 type Vehicle {
+    """
+    El ID del vehiculo"
+    """
     id: ID!,
+    """
+    El tipo de vehiculo car/moto/truck
+    """
     type: String,
     modelCode: String,
     brandName: String,
@@ -7,8 +16,16 @@ type Vehicle {
     color: String
 }
 
+
+"""
+Root Tipo Raiz para todas las consultas
+"""
 type Query {
+    """
+    Translates a string from a given language into a different language.
+    """
     vehicles(count: Int):[Vehicle]
+    # "Consulta para un solo vehiculo por ID"
     vehicle(id: ID):Vehicle
 }
 
