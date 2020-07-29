@@ -13,7 +13,8 @@ type Vehicle {
     modelCode: String,
     brandName: String,
     launchDate: String,
-    color: String
+    color: String,
+    altura: String
 }
 
 
@@ -32,4 +33,8 @@ type Query {
 type Mutation {
     createVehicle(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicle
     updateColor(id:ID!, color:String!):Vehicle
+    """
+    Actualiza el color de un vehiculo.
+    """
+    actualizarAlto(id:ID!, alto:String!):Vehicle
 }

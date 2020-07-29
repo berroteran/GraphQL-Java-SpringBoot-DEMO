@@ -37,7 +37,7 @@ public class Vehicle implements Serializable {
     private LocalDate launchDate;
 
     private String color;
-    private Double altura;
+    private String altura;
     private Double ancho;
     private Double largo;
 

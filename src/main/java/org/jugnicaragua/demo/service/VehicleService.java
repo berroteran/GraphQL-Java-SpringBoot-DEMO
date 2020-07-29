@@ -47,4 +47,16 @@ public class VehicleService {
     public Optional<Vehicle> getVehicle(final int id) {
         return this.vehicleRepository.findById(id);
     }
+
+    @Transactional
+    public Vehicle updateHeight(Integer id, String altura) {
+        //primero lo encontramos
+        Vehicle car = this.vehicleRepository.findById(id).get();
+        //cambiamos el valor
+        car.setAltura(altura);
+        //guarda
+        this.vehicleRepository.save(car);
+        //regresamos el valor
+        return car;
+    }
 }
