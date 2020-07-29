@@ -36,5 +36,16 @@ public class VehicleMutation implements GraphQLMutationResolver {
     public Vehicle updateColor(Integer id, final String color) {
         return this.vehicleService.updateColor(id, color);
     }
+
+    /**
+     * Update alto
+     *
+     * @param id
+     * @param color
+     * @return
+     */
+    public Vehicle actualizarAlto(Integer id, final String color) {
+        return this.vehicleService.updateHeight(id, color);
+    }
 }
 
